@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps = "http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="15dp" >
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save changes"
+        android:textColor="#5E5E5E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        apps:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Save as a copy or overwrite the original image?"
+        android:textColor="#5E5E5E"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        apps:layout_constraintTop_toBottomOf="@+id/dialog_title"
+        />
+
+    <CheckBox
+        android:id="@+id/dialog_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:checked="false"
+        android:text="Set as default"
+        android:textSize="16sp"
+        android:textColor="#5E5E5E"
+        apps:layout_constraintStart_toStartOf="parent"
+        apps:layout_constraintTop_toBottomOf="@+id/dialog_message"/>
+
+    <Button
+        android:id="@+id/button_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save as new"
+        android:textColor="#4C72BF"
+        android:background="@android:color/transparent"
+        apps:layout_constraintEnd_toEndOf="parent"
+        apps:layout_constraintTop_toBottomOf="@id/dialog_checkbox"/>
+
+    <Button
+        android:id="@+id/button_overwrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overwrite original"
+        android:textColor="#4C72BF"
+        android:background="@android:color/transparent"
+
+        apps:layout_constraintEnd_toEndOf="parent"
+        apps:layout_constraintTop_toBottomOf="@id/button_copy"/>
+
+</android.support.constraint.ConstraintLayout>
