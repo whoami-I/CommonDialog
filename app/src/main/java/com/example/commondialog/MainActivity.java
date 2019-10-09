@@ -39,10 +39,13 @@ public class MainActivity extends AppCompatActivity {
                                 Toast.makeText(MainActivity.this, "button_overwrite", Toast.LENGTH_SHORT).show();
                             }
                         })
+                        //.setCancelable(false)
+                        .setCanceledOnTouchOutside(false)
                         .bottom(true)
                         .setAnimation(R.style.anim_bottom_in)
                         .create();
                 commonDialog.show();
+                //commonDialog.setCanceledOnTouchOutside();
                 ((TextView)commonDialog.getView(R.id.button_copy)).setTextColor(Color.parseColor("#FF0000"));
             }
 

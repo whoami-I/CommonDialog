@@ -53,6 +53,7 @@ class AlertController {
 	static class AlertParams {
 		public Context mContext;
 		public boolean mCancelable = true;
+		public boolean mCancelableOutsideDialog = true;
 		public DialogInterface.OnCancelListener mOnCancelListener;
 		public DialogInterface.OnDismissListener mOnDismissListener;
 		public DialogInterface.OnKeyListener mOnKeyListener;

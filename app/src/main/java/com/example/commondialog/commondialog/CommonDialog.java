@@ -114,10 +114,21 @@ public class CommonDialog extends Dialog {
             return this;
         }
 
+        public Builder setCancelable(boolean flag){
+            P.mCancelable = flag;
+            return this;
+        }
+
+        public Builder setCanceledOnTouchOutside(boolean flag){
+            P.mCancelableOutsideDialog = flag;
+            return this;
+        }
+
         public CommonDialog create() {
             final CommonDialog dialog = new CommonDialog(P.mContext, mTheme);
             P.apply(dialog.mAlert);
             dialog.setCancelable(P.mCancelable);
+            dialog.setCanceledOnTouchOutside(P.mCancelableOutsideDialog);
             dialog.setCanceledOnTouchOutside(P.mCancelable);
             dialog.setOnCancelListener(P.mOnCancelListener);
             dialog.setOnDismissListener(P.mOnDismissListener);
